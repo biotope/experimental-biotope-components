@@ -95,7 +95,7 @@ export class Slider extends BioElement<SliderProps, SliderState> {
         const changeEvent = new CustomEvent('slideChange', {
             bubbles: true,
             cancelable: true,
-            detail: this.props.selected
+            detail: this.state.selected
         });
 
         this.dispatchEvent(changeEvent);
