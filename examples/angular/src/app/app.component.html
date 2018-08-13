@@ -5,10 +5,11 @@
 </x-slider>
 
 
-<button (click)="onAddSlide()">Add another slide</button>
+<div>
+  <button (click)="onAddSlide()">Add another slide</button>
+  <button (click)="onResetSlider()">Reset slider</button>
+</div>
 
-<button (click)="onResetSlider()">Reset slider</button>
+<p>current slide: {{slides[selectedSlideIdx]}}</p>
 
-current slide: {{slides[selectedSlideIdx]}}
-
-last clicked slide: {{lastClickedSlide}}
+<p>last clicked slide: {{lastClickedSlide}}</p>
