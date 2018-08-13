@@ -1,6 +1,7 @@
 # AngularSample for Biotope Components
 
-First install dependencies using `npm install` in the `angular folder`. You also need to build the Biotope resources.
+First install dependencies using `npm install` in the `examples/angular` folder. You also need to build the Biotope resources first, as 
+the `Slider` component is imported directly from the `dist` folder.
 
 ## Development server
 
