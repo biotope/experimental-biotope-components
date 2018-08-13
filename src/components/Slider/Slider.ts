@@ -16,6 +16,10 @@ interface SliderState {
 }
 
 export class Slider extends BioElement<SliderProps, SliderState> {
+    static get observedAttributes() {
+        return ['selected'];
+    }
+
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
