@@ -1,0 +1,22 @@
+<div class="section">
+	<section>
+		<div class="row row--reducedWidth">
+			<div class="col" id="sliders">
+
+				{{!-- <x-slider id="slider" data-resources="[{paths: ['components/Slider/index.js']}]" selected="2">
+					<x-slide>First</x-slide>
+					<x-slide>Second</x-slide>
+					<x-slide>Third</x-slide>
+				</x-slider> --}}
+
+				<wrapped-slider store="r">
+					<x-slider id="slider" data-resources="[{paths: ['components/Slider/index.js']}]" selected="1">
+						<x-slide>First</x-slide>
+						<x-slide>Second</x-slide>
+						<x-slide>Third</x-slide>
+					</x-slider>
+				</wrapped-slider>
+			</div>
+		</div>
+	</section>
+</div>
