@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@biotope/configuration": "^2.0.2",
+    "@biotope/element": "^1.0.0",
     "@biotope/resource-loader": "^1.3.0",
     "@types/jquery": "3.3.2",
     "@types/modernizr": "3.5.1",

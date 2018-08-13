@@ -1,4 +1,4 @@
-import BioComponent from '../../resources/ts/core/BioComponent';
+import BioElement from '@biotope/element';
 
 export interface SlideProps {
     isSelected: boolean;
@@ -8,7 +8,7 @@ interface SlideState {
 
 }
 
-export class Slide extends BioComponent<SlideProps, SlideState> {
+export class Slide extends BioElement<SlideProps, SlideState> {
 
     constructor() {
         super();
@@ -16,7 +16,7 @@ export class Slide extends BioComponent<SlideProps, SlideState> {
     }
 
     get defaultProps() {
-        return {isSelected: this.hasAttribute('selected')};
+        return { isSelected: this.hasAttribute('selected') };
     }
 
     created() {
@@ -27,7 +27,9 @@ export class Slide extends BioComponent<SlideProps, SlideState> {
         const isSelected = this.props.isSelected;
 
         return isSelected
-            ? this.html`<div class="slide"><slot></slot></div>`
+            ? this.html`<div class="slide">
+    <slot></slot>
+</div>`
             : this.html``;
     }
 }

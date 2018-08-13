@@ -1,4 +1,4 @@
-import BioComponent from '../../resources/ts/core/BioComponent';
+import BioElement from '@biotope/element';
 
 
 export interface StepperProps {
@@ -9,11 +9,11 @@ interface StepperState {
 
 }
 
-export class Stepper extends BioComponent<StepperProps, StepperState> {
+export class Stepper extends BioElement<StepperProps, StepperState> {
 
     static get observedAttributes() {
         return [
-            ...BioComponent.observedAttributes,
+            ...BioElement.observedAttributes,
             'direction'
         ]
     }
@@ -23,13 +23,13 @@ export class Stepper extends BioComponent<StepperProps, StepperState> {
     }
 
     get propsFromAttributes() {
-        return {direction: this.getAttribute('direction')};
+        return { direction: this.getAttribute('direction') };
     }
 
     render() {
-        
-        const {direction} = this.props;
-        
+
+        const { direction } = this.props;
+
         this.html`
             <button>${direction}</button>
         `;

@@ -1,4 +1,4 @@
-import BioComponent from '../../resources/ts/core/BioComponent';
+import BioElement from '@biotope/element';
 
 
 export interface DotsProps {
@@ -10,19 +10,19 @@ interface DotsState {
 
 }
 
-export class Dots extends BioComponent<DotsProps, DotsState> {
+export class Dots extends BioElement<DotsProps, DotsState> {
 
     created() {
         this.render();
     }
 
     render() {
-        const {selected, count} = this.props;
+        const { selected, count } = this.props;
         const dots = new Array(count).fill(1);
 
         const dotElements = dots.map((_, idx) => selected === idx
-            ? BioComponent.wire()`<li onclick=${() => this.onSelected(idx)} style="color: red">+</li>`
-            : BioComponent.wire()`<li onclick=${() => this.onSelected(idx)}>+</li>`);
+            ? BioElement.wire()`<li onclick=${() => this.onSelected(idx)} style="color: red">+</li>`
+            : BioElement.wire()`<li onclick=${() => this.onSelected(idx)}>+</li>`);
         this.html`
             <ul>${dotElements}</ul>
         `;

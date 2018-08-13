@@ -1,15 +1,15 @@
 import { Slider } from './Slider';
-import BioComponent from '../../resources/ts/core/BioComponent';
+import BioElement from '@biotope/element';
 
 export interface WrappedSliderProps {
     store: string;
 }
 
 export interface WrappedSliderState {
-    
+
 }
 
-export class WrappedSlider extends BioComponent<WrappedSliderProps, WrappedSliderState> {
+export class WrappedSlider extends BioElement<WrappedSliderProps, WrappedSliderState> {
 
     constructor() {
         super();
