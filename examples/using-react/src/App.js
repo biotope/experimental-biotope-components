@@ -18,7 +18,7 @@ import Slide from './components/Slider/Slide';
 */
 class App extends Component {
   state = { 
-    selected: 2, 
+    selected: 0, 
     slides: [0, 1, 2, 3, 4]
   }
 
@@ -30,7 +30,7 @@ class App extends Component {
     document.removeEventListener('slideChange', this.syncState);
   }
 
-  syncState = e => this.setState({ selected: 3 })
+  syncState = e => this.setState({ selected: e.detail })
 
   render() {
     const { selected, slides } = this.state;
