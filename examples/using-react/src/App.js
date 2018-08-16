@@ -10,12 +10,6 @@ import 'biotope';
 import Slider from './components/Slider/Slider';
 import Slide from './components/Slider/Slide';
 
-/* 
-    DEV NOTE
-    The components shopuld work as intended straight out of the box,
-    but this example also wires into the web-components logic
-    to try and control it from a react stateful component
-*/
 class App extends Component {
   state = { 
     selected: 0, 
