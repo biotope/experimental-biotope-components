@@ -4,9 +4,9 @@
     <p>(To reset, click the image)</p>
     <x-slider ref="slider" :selected="selected" @slideChange="handleSlideChange">
       <x-slide>First</x-slide>
-      <x-slide>Second</x-slide>
+      <Slide>Second</Slide>
       <x-slide>Third</x-slide>
-      <x-slide>Fourth</x-slide>
+      <Slide>Fourth</Slide>
       <x-slide>Fifth</x-slide>
     </x-slider>
   </div>
@@ -14,9 +14,14 @@
 
 <script>
 import Slider from '../../../dist/resources/components/Slider';
+import Slide from './Slide';
 
 export default {
   name: 'App',
+
+  components: {
+    Slide,
+  },
 
   data() {
     return {
