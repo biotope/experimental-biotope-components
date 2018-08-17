@@ -9,31 +9,17 @@ interface StepperState {
 
 }
 
-export class Stepper extends BioElement<StepperProps, StepperState> {
-
-    static get observedAttributes() {
-        return [
-            ...BioElement.observedAttributes,
-            'direction'
-        ]
-    }
-
+export class XStepper extends BioElement<StepperProps, StepperState> {
+    static bioAttributes = ['direction'];
     created() {
         this.render();
     }
-
-    get propsFromAttributes() {
-        return { direction: this.getAttribute('direction') };
-    }
-
     render() {
-
         const { direction } = this.props;
-
         this.html`
             <button>${direction}</button>
         `;
     }
 }
 
-Stepper.define('x-stepper');
+XStepper.register();

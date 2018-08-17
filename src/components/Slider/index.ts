@@ -1,1 +1,1 @@
-import './WrappedSlider';
+import './Slider';

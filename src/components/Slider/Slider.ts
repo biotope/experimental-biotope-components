@@ -3,23 +3,19 @@ import './Slide';
 import './Stepper';
 
 import BioElement from '@biotope/element';
-import { Slide } from './Slide';
+import { XSlide } from './Slide';
 
 
-export interface SliderProps {
+export interface XSliderProps {
     selected: number;
 }
 
-interface SliderState {
+interface XSliderState {
     lastSelected: number;
     selected: number;
 }
 
-export class Slider extends BioElement<SliderProps, SliderState> {
-    static get observedAttributes() {
-        return ['selected'];
-    }
-
+export class XSlider extends BioElement<XSliderProps, XSliderState> {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -27,13 +23,18 @@ export class Slider extends BioElement<SliderProps, SliderState> {
         // re-render when children have changed. Note that childNodes is empty when connectedCallback is called
         // note also, that created() is called when initial childNodes are available. so maybe only re-render
         // on child note changes after created has been called
-        const observer = new MutationObserver(changes => !(<any>this)._init$ && this.render());
+        const observer = new MutationObserver(changes => !(this as any)._init$ && this.render());
         observer.observe(this, { childList: true });
 
         this.onNextSlide = this.onNextSlide.bind(this);
         this.onPrevSlide = this.onPrevSlide.bind(this);
         this.onSelectSlide = this.onSelectSlide.bind(this);
     }
+
+    static bioAttributes = [{
+        name: 'selected',
+        converter: (a) => parseInt(a, 10),
+    }];
 
     get defaultState() {
         return { lastSelected: 0, selected: 0 };
@@ -48,14 +49,6 @@ export class Slider extends BioElement<SliderProps, SliderState> {
         this.render();
     }
 
-    get defaultProps() {
-        var initiallySelectedSlide = this.hasAttribute('selected')
-            ? parseInt(this.getAttribute('selected'), 10)
-            : 0;
-
-        return { selected: initiallySelectedSlide };
-    }
-
     render() {
         const { selected } = this.state;
         const slidesCount = this.slides.length;
@@ -63,7 +56,7 @@ export class Slider extends BioElement<SliderProps, SliderState> {
         this.slides.forEach((slide, idx) => slide.props = { isSelected: idx === selected });
 
         return this.html`
-            <x-stepper direction="previous" onclick=${this.onPrevSlide}></x-stepper>
+             <x-stepper direction="previous" onclick=${this.onPrevSlide}></x-stepper>
             <div class="slides">
                 <slot></slot>
             </div>
@@ -106,7 +99,7 @@ export class Slider extends BioElement<SliderProps, SliderState> {
     }
 
     get slides() {
-        return [...(<any>this.childNodes)].filter((n) => n instanceof Slide);
+        return [...(<any>this.childNodes)].filter((n) => n instanceof XSlide);
     }
 
     get slidesCount() {
@@ -114,4 +107,4 @@ export class Slider extends BioElement<SliderProps, SliderState> {
     }
 }
 
-Slider.define('x-slider');
+XSlider.register();
