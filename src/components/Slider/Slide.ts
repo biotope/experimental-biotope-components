@@ -1,30 +1,25 @@
 import BioElement from '@biotope/element';
 
-export interface SlideProps {
+export interface XSlideProps {
     isSelected: boolean;
 }
 
-interface SlideState {
+interface XSlideState {
 
 }
 
-export class Slide extends BioElement<SlideProps, SlideState> {
-
+export class XSlide extends BioElement<XSlideProps, XSlideState> {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
-
-    get defaultProps() {
-        return { isSelected: this.hasAttribute('selected') };
-    }
-
+    static bioAttributes = ['isSelected']
     created() {
         this.render();
     }
 
     render() {
-        const isSelected = this.props.isSelected;
+        const {isSelected} = this.props;
 
         return isSelected
             ? this.html`<div class="slide">
@@ -34,4 +29,4 @@ export class Slide extends BioElement<SlideProps, SlideState> {
     }
 }
 
-Slide.define('x-slide');
+XSlide.register();

@@ -1,16 +1,16 @@
 import BioElement from '@biotope/element';
 
 
-export interface DotsProps {
+export interface XDotsProps {
     selected: number;
     count: number
 }
 
-interface DotsState {
+interface XDotsState {
 
 }
 
-export class Dots extends BioElement<DotsProps, DotsState> {
+export class XDots extends BioElement<XDotsProps, XDotsState> {
 
     created() {
         this.render();
@@ -39,4 +39,4 @@ export class Dots extends BioElement<DotsProps, DotsState> {
     }
 }
 
-Dots.define('x-dots');
+XDots.register();

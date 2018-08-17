@@ -85,10 +85,11 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@biotope/configuration/-/configuration-2.1.0.tgz#d2a27a270b687c35b91554d74adbd51ade4cc990"
 
-"@biotope/element@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.0.0.tgz#da3bb65c5de1fc748c835e134e796dbf983ab978"
+"@biotope/element@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.2.2.tgz#9160ea4688dc522e1415454d5f25b40dc6a59d0a"
   dependencies:
+    dasherize "^2.0.0"
     hyperhtml-element "^2.1.1"
 
 "@biotope/generator@^1.1.2":
@@ -2590,6 +2591,10 @@ dashdash@^1.12.0:
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
+
+dasherize@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/dasherize/-/dasherize-2.0.0.tgz#6d809c9cd0cf7bb8952d80fc84fa13d47ddb1308"
 
 date-now@^0.1.4:
   version "0.1.4"
