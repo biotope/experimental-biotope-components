@@ -8,13 +8,20 @@ const withDataTap = WrappedComponent => {
         }
 
         componentDidMount() {
-            const { data } = this.props;
-            this.node.current.props = data;
+            this.useDataAsTap();
         }
 
         componentDidUpdate() {
+            this.useDataAsTap();
+        }
+
+        useDataAsTap = () => {
             const { data } = this.props;
-            this.node.current.props = data;
+            const { forwardedRef } = this.node.current;
+
+            return forwardedRef ?
+                forwardedRef.current.props = data :
+                this.node.current.props = data;
         }
 
         render() {
