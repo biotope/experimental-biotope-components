@@ -1,0 +1,15 @@
+<x-slider (slideChange)="onSlideChange($event)" [props]="sliderProps">
+  <x-slide *ngFor="let slide of slides">
+    <app-button [text]="slide" (myClick)="onClickSlide(slide)"></app-button>
+  </x-slide>
+</x-slider>
+
+
+<div>
+  <button (click)="onAddSlide()">Add another slide</button>
+  <button (click)="onResetSlider()">Reset slider</button>
+</div>
+
+<p>current slide: {{slides[selectedSlideIdx]}}</p>
+
+<p>last clicked slide: {{lastClickedSlide}}</p>
