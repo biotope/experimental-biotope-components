@@ -85,9 +85,9 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@biotope/configuration/-/configuration-2.1.0.tgz#d2a27a270b687c35b91554d74adbd51ade4cc990"
 
-"@biotope/element@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.0.0.tgz#da3bb65c5de1fc748c835e134e796dbf983ab978"
+"@biotope/element@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.0.2.tgz#032512334a4d3bd1216947ed61d5f75d082be3fa"
   dependencies:
     hyperhtml-element "^2.1.1"
 
