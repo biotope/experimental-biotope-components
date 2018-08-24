@@ -1,1 +1,3 @@
-import './Slider';
+import { XSlider } from './Slider';
+
+XSlider.register();

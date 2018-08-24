@@ -1,3 +1,4 @@
+import template from './Slide.tpl';
 import BioElement from '@biotope/element';
 
 export interface XSlideProps {
@@ -9,24 +10,13 @@ interface XSlideState {
 }
 
 export class XSlide extends BioElement<XSlideProps, XSlideState> {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
+    static elementName = 'x-slide';
     static bioAttributes = ['isSelected']
     created() {
         this.render();
     }
 
     render() {
-        const {isSelected} = this.props;
-
-        return isSelected
-            ? this.html`<div class="slide">
-    <slot></slot>
-</div>`
-            : this.html``;
+        return template(this.html, {})
     }
 }
-
-XSlide.register();

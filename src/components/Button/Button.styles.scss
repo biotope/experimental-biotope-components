@@ -1,0 +1,11 @@
+:host {
+    background-color: aquamarine;
+    border: none;
+    padding: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+:host(:hover) {
+    color: blue;
+}

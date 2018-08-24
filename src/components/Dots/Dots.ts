@@ -1,3 +1,5 @@
+import { DotData } from './DotData';
+import template from './Dots.tpl';
 import BioElement from '@biotope/element';
 
 
@@ -12,20 +14,24 @@ interface XDotsState {
 
 export class XDots extends BioElement<XDotsProps, XDotsState> {
 
+    static elementName = 'x-dots';
+
     created() {
         this.render();
     }
 
     render() {
         const { selected, count } = this.props;
-        const dots = new Array(count).fill(1);
+        const dots: DotData[] = new Array(count).fill(1).map((title, idx) => ({
+            title,
+            selected: idx === selected,
+            onClick: this.onSelected.bind(this)
+        }));
 
-        const dotElements = dots.map((_, idx) => selected === idx
-            ? BioElement.wire()`<li onclick=${() => this.onSelected(idx)} style="color: red">+</li>`
-            : BioElement.wire()`<li onclick=${() => this.onSelected(idx)}>+</li>`);
-        this.html`
-            <ul>${dotElements}</ul>
-        `;
+
+        return template(this.html, {
+            dots
+        });
     }
 
     onSelected(index) {
@@ -38,5 +44,3 @@ export class XDots extends BioElement<XDotsProps, XDotsState> {
         this.dispatchEvent(selectEvent);
     }
 }
-
-XDots.register();
