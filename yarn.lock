@@ -88,11 +88,12 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@biotope/configuration/-/configuration-2.1.0.tgz#d2a27a270b687c35b91554d74adbd51ade4cc990"
 
-"@biotope/element@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.2.2.tgz#9160ea4688dc522e1415454d5f25b40dc6a59d0a"
+"@biotope/element@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.5.0.tgz#deb80f344ef49637581b8e68a78616e8f92fe1ff"
   dependencies:
     dasherize "^2.0.0"
+    hyperhtml "^2.13.0"
     hyperhtml-element "^2.1.1"
 
 "@biotope/generator@^1.1.2":
@@ -280,8 +281,8 @@
     long "^3.2.0"
 
 "@webcomponents/webcomponentsjs@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.2.0.tgz#c9e129340c3e4637f5fa6505e968e85face7bd5b"
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-1.2.6.tgz#5d71fea4a5677b8c1a2118d55f8b286fd522f632"
 
 "JSV@>= 4.0.x":
   version "4.0.2"
