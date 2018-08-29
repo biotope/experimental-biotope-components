@@ -10,6 +10,7 @@ interface StepperState {
 }
 
 export class XStepper extends BioElement<StepperProps, StepperState> {
+    static componentName = 'x-stepper';
     static bioAttributes = ['direction'];
     created() {
         this.render();

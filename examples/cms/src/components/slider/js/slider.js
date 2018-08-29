@@ -554,7 +554,7 @@
         class Slide extends _biotope_element__WEBPACK_IMPORTED_MODULE_0__["default"] {
           constructor() {
             super();
-            this.attachShadow({ mode: 'open' });
+
           }
           get defaultProps() {
             return { isSelected: this.hasAttribute('selected') };
@@ -600,7 +600,7 @@
         class Slider extends _biotope_element__WEBPACK_IMPORTED_MODULE_3__["default"] {
           constructor() {
             super();
-            this.attachShadow({ mode: 'open' });
+
             // re-render when children have changed. Note that childNodes is empty when connectedCallback is called
             // note also, that created() is called when initial childNodes are available. so maybe only re-render
             // on child note changes after created has been called
