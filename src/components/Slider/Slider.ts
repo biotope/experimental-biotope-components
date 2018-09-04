@@ -16,9 +16,10 @@ interface XSliderState {
 }
 
 export class XSlider extends BioElement<XSliderProps, XSliderState> {
+    static componentName = 'x-slider';
+
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' });
 
         // re-render when children have changed. Note that childNodes is empty when connectedCallback is called
         // note also, that created() is called when initial childNodes are available. so maybe only re-render

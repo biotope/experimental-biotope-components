@@ -9,9 +9,10 @@ interface XSlideState {
 }
 
 export class XSlide extends BioElement<XSlideProps, XSlideState> {
+    static componentName = 'x-slide';
+
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' });
     }
     static bioAttributes = ['isSelected']
     created() {
