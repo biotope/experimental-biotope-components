@@ -8,18 +8,18 @@
 		"sourceMap": true,
 		"suppressImplicitAnyIndexErrors": true,
 		"allowSyntheticDefaultImports": true,
-		"target": "ES6",
+		"target": "ES5",
 		"lib": [
 			"es2017",
 			"dom"
-		  ]
+		]
 	},
 	"awesomeTypescriptLoaderOptions": {
 		"useCache": true,
 		"reportFiles": [
 			"src/**/*.{ts,tsx}"
 		]
-    },
+	},
 	"typeRoots": [
 		"node_modules/@types"
 	],

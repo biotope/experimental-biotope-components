@@ -1,10 +1,14 @@
+import './polyfills/Array.find';
+import './polyfills/Array.fill';
+
+
 (function ($, window, document) {
 	'use strict';
 
 	$(function () {
 
 		// listen to resourcesReady event
-		$(window).one('resourcesReady', function() {
+		$(window).one('resourcesReady', function () {
 			init();
 		});
 
@@ -24,7 +28,7 @@
 	});
 
 	window['biotope'].configuration.set('initCore', function () {
-		
+
 	});
 
 })(jQuery, window, document);
