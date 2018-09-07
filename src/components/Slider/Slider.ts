@@ -19,13 +19,11 @@ interface XSliderState {
 export class XSlider extends BioElement<XSliderProps, XSliderState> {
     static componentName = 'x-slider';
 
-    get dependencies() {
-        return [
-            XButton,
-            XSlide,
-            XDots
-        ]
-    };
+    static dependencies = [
+        XButton,
+        XSlide,
+        XDots
+    ];
 
     constructor() {
         super();
@@ -108,7 +106,7 @@ export class XSlider extends BioElement<XSliderProps, XSliderState> {
     }
 
     get slides() {
-        return [].slice.call(this.childNodes).filter((n) => n instanceof XSlide);
+        return [].slice.call(this.children);
     }
 
     get slidesCount() {

@@ -1,4 +1,11 @@
+x-slider {
+    display: inline-block;
+    background-color: orange;
+}
 :host {
     display: inline-block;
     background-color: orange;
+}
+body {
+    background-color: aqua;
 }

@@ -7,10 +7,9 @@ interface TemplateData {
     onNextSlide: () => void;
     onPrevSlide: () => void;
 }
+const styles = createStylesFrom(require('./Slider.styles'));
 
 export default (html: Function, data: TemplateData) => {
-    const styles = createStylesFrom(require('./Slider.styles'));
-
     return html`
      ${styles}
     <x-button title="previous" onclick=${data.onPrevSlide}></x-button>
@@ -18,6 +17,6 @@ export default (html: Function, data: TemplateData) => {
         <slot></slot>
     </div>
     <x-button title="next" onclick=${data.onNextSlide}></x-button>
-    <x-dots props=${ { count: data.slidesCount, selected: data.selectedSlide }} onselectSlide=${data.onSelectSlide}></x-dots>
+    <x-dots count=${data.slidesCount} selected=${data.selectedSlide} onselectSlide=${data.onSelectSlide}></x-dots>
      `;
 }

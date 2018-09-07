@@ -6,8 +6,9 @@ interface TemplateData {
     dots: DotData[];
 }
 
+const styles = createStylesFrom(require('./Dots.styles'));
+
 export default (html: Function, data: TemplateData) => {
-    const styles = createStylesFrom(require('./Dots.styles'));
     const dotElements: string[] = createDotElementsFrom(data.dots);
 
     return html`

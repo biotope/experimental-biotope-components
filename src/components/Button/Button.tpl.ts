@@ -4,9 +4,9 @@ interface TemplateData {
     title: string;
 }
 
-export default (html: Function, data: TemplateData) => {
-    const styles = createStylesFrom(require('./Button.styles'));
+const styles = createStylesFrom(require('./Button.styles'));
 
+export default (html: Function, data: TemplateData) => {
     return html`
      ${styles} ${data.title}
     `;

@@ -4,9 +4,9 @@ interface TemplateData {
 
 }
 
-export default (html: Function, data: TemplateData) => {
-    const styles = createStylesFrom(require('./Slide.styles'));
+const styles = createStylesFrom(require('./Slide.styles'));
 
+export default (html: Function, data: TemplateData) => {
     return html`
      ${styles}
     <slot></slot>`;
