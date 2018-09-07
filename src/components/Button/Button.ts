@@ -11,7 +11,7 @@ interface ButtonState {
 }
 
 export class XButton extends BioElement<ButtonProps, ButtonState> {
-    static elementName = 'x-button';
+    static componentName = 'x-button';
     static bioAttributes = ['title'];
     created() {
         this.render();

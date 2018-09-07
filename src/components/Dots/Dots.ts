@@ -13,6 +13,7 @@ interface XDotsState {
 }
 
 export class XDots extends BioElement<XDotsProps, XDotsState> {
+    static componentName = 'x-dots';
 
     static elementName = 'x-dots';
 

@@ -1,3 +1,7 @@
+import './polyfills/Array.find';
+import './polyfills/Array.fill';
+
+
 (function ($, window, document) {
 	'use strict';
 

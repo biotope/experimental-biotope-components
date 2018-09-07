@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@biotope/configuration": "^2.0.2",
-    "@biotope/element": "^1.2.2",
+    "@biotope/element": "^1.5.1",
     "@biotope/resource-loader": "^1.3.0",
     "@types/jquery": "3.3.2",
     "@types/modernizr": "3.5.1",
@@ -44,7 +44,7 @@
     "vi-css-helper": "https://github.com/virtualidentityag/vi-css-helper.git#1.1.1"
   },
   "devDependencies": {
-    "@biotope/build": "^5.4.0",
+    "@biotope/build": "git+ssh://git@github.com:biotope/biotope-build.git#experimental-webcomponents",
     "@biotope/generator": "^1.1.2",
     "awesome-typescript-loader": "^5.2.0",
     "chai": "4.1.2",
