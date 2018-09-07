@@ -57,7 +57,7 @@ export class XSlider extends BioElement<XSliderProps, XSliderState> {
         this.slides.forEach((slide, idx) => slide.props = { isSelected: idx === selected });
 
         return this.html`
-             <x-stepper direction="previous" onclick=${this.onPrevSlide}></x-stepper>
+            <x-stepper direction="previous" onclick=${this.onPrevSlide}></x-stepper>
             <div class="slides">
                 <slot></slot>
             </div>
@@ -100,7 +100,7 @@ export class XSlider extends BioElement<XSliderProps, XSliderState> {
     }
 
     get slides() {
-        return [...(<any>this.childNodes)].filter((n) => n instanceof XSlide);
+        return [].slice.call(this.childNodes).filter((n) => n instanceof XSlide);
     }
 
     get slidesCount() {
