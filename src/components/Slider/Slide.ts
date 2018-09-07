@@ -20,7 +20,7 @@ export class XSlide extends BioElement<XSlideProps, XSlideState> {
     }
 
     render() {
-        const {isSelected} = this.props;
+        const { isSelected } = this.props;
 
         return isSelected
             ? this.html`<div class="slide">
