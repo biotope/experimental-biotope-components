@@ -15,7 +15,7 @@ interface XDotsState {
 export class XDots extends Component<XDotsProps, XDotsState> {
     static componentName = 'x-dots';
 
-    static bioAttributes = [{
+    static _attributes = [{
         name: 'count',
         converter: (input: string) => parseInt(input, 10)
     }, {

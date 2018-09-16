@@ -12,7 +12,7 @@ interface XSlideState {
 export class XSlide extends Component<XSlideProps, XSlideState> {
     static componentName = 'x-slide';
 
-    static bioAttributes = ['isSelected']
+    static _attributes = ['isSelected']
     created() {
         this.render();
     }

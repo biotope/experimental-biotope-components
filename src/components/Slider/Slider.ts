@@ -39,7 +39,7 @@ export class XSlider extends Component<XSliderProps, XSliderState> {
         this.onSelectSlide = this.onSelectSlide.bind(this);
     }
 
-    static bioAttributes = [{
+    static _attributes = [{
         name: 'selected',
         converter: (a) => parseInt(a, 10),
     }];

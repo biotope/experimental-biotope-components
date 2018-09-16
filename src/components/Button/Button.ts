@@ -12,7 +12,7 @@ interface ButtonState {
 
 export class XButton extends Component<ButtonProps, ButtonState> {
     static componentName = 'x-button';
-    static bioAttributes = ['title'];
+    static _attributes = ['title'];
 
     created() {
         this.render();

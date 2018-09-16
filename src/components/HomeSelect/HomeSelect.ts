@@ -10,7 +10,7 @@ interface HomeSelectState {
 
 export class HomeSelect extends Component<HomeSelectProps, HomeSelectState> {
   static componentName = 'home-select';
-  static bioAttributes = ['title'];
+  static _attributes = ['title'];
   render() {
     console.log(this.props);
     template(this.html, {
