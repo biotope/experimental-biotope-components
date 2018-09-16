@@ -1,6 +1,6 @@
 import { DotData } from './DotData';
 import template from './Dots.tpl';
-import BioElement from '@biotope/element';
+import Component from '@biotope/element';
 
 
 export interface XDotsProps {
@@ -12,7 +12,7 @@ interface XDotsState {
 
 }
 
-export class XDots extends BioElement<XDotsProps, XDotsState> {
+export class XDots extends Component<XDotsProps, XDotsState> {
     static componentName = 'x-dots';
 
     static bioAttributes = [{

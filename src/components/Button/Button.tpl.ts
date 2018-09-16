@@ -1,13 +1,14 @@
-import { createStylesFrom } from '../../resources/ts/core/createStylesFrom';
+import { createStylesCreatorFrom } from '../../resources/ts/core/createStylesCreatorFrom';
+import styles from './Button.styles';
 
 interface TemplateData {
     title: string;
 }
 
-const styles = createStylesFrom(require('./Button.styles'));
+const styleTagCreator = createStylesCreatorFrom(styles);
 
 export default (html: Function, data: TemplateData) => {
     return html`
-     ${styles} ${data.title}
+         ${styleTagCreator()} ${data.title}
     `;
 }

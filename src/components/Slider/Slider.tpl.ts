@@ -1,4 +1,5 @@
-import { createStylesFrom } from '../../resources/ts/core/createStylesFrom';
+import { createStylesCreatorFrom } from '../../resources/ts/core/createStylesCreatorFrom';
+import styles from './Slider.styles';
 
 interface TemplateData {
     slidesCount: number;
@@ -7,16 +8,16 @@ interface TemplateData {
     onNextSlide: () => void;
     onPrevSlide: () => void;
 }
-const styles = createStylesFrom(require('./Slider.styles'));
+const styleTagCreator = createStylesCreatorFrom(styles);
 
 export default (html: Function, data: TemplateData) => {
     return html`
-     ${styles}
-    <x-button title="previous" onclick=${data.onPrevSlide}></x-button>
-    <div class="slides">
-        <slot></slot>
-    </div>
-    <x-button title="next" onclick=${data.onNextSlide}></x-button>
-    <x-dots count=${data.slidesCount} selected=${data.selectedSlide} onselectSlide=${data.onSelectSlide}></x-dots>
+         ${styleTagCreator()}
+        <x-button title="previous" onclick=${data.onPrevSlide}></x-button>
+        <div class="slides">
+            <slot></slot>
+        </div>
+        <x-button title="next" onclick=${data.onNextSlide}></x-button>
+        <x-dots count=${data.slidesCount} selected=${data.selectedSlide} onselectSlide=${data.onSelectSlide}></x-dots>
      `;
 }

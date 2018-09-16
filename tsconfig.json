@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
 		"allowJs": true,
-		"jsx": "React",
-		"module": "es2015",
+		"jsx": "react",
+		"module": "es6",
 		"moduleResolution": "Node",
 		"noImplicitAny": false,
 		"sourceMap": true,
@@ -21,7 +21,8 @@
 		]
 	},
 	"typeRoots": [
-		"node_modules/@types"
+		"node_modules/@types",
+		"typings"
 	],
 	"types": [
 		"react",

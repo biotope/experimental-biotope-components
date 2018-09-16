@@ -1,4 +1,4 @@
-import BioElement from '@biotope/element';
+import Component from '@biotope/element';
 import { template } from './HomeSelect.tpl';
 
 interface HomeSelectProps {
@@ -8,7 +8,7 @@ interface HomeSelectState {
 
 }
 
-export class HomeSelect extends BioElement<HomeSelectProps, HomeSelectState> {
+export class HomeSelect extends Component<HomeSelectProps, HomeSelectState> {
   static componentName = 'home-select';
   static bioAttributes = ['title'];
   render() {

@@ -1,11 +1,11 @@
 import template from './Slider.tpl';
 
-import BioElement from '@biotope/element';
 
 import { XSlide } from '../Slide/Slide';
 import { XButton } from '../Button/Button';
 import { XDots } from '../Dots/Dots';
 
+import Component from '@biotope/element';
 
 export interface XSliderProps {
     selected: number;
@@ -16,7 +16,7 @@ interface XSliderState {
     selected: number;
 }
 
-export class XSlider extends BioElement<XSliderProps, XSliderState> {
+export class XSlider extends Component<XSliderProps, XSliderState> {
     static componentName = 'x-slider';
 
     static dependencies = [

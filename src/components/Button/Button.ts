@@ -1,5 +1,5 @@
 import template from './Button.tpl';
-import BioElement from '@biotope/element';
+import Component from '@biotope/element';
 
 
 export interface ButtonProps {
@@ -10,9 +10,10 @@ interface ButtonState {
 
 }
 
-export class XButton extends BioElement<ButtonProps, ButtonState> {
+export class XButton extends Component<ButtonProps, ButtonState> {
     static componentName = 'x-button';
     static bioAttributes = ['title'];
+
     created() {
         this.render();
     }

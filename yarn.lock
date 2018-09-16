@@ -605,9 +605,9 @@
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@biotope/configuration/-/configuration-2.1.0.tgz#d2a27a270b687c35b91554d74adbd51ade4cc990"
 
-"@biotope/element@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.5.1.tgz#974998b52b996843eee7ac62debd473aefd8fb8e"
+"@biotope/element@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@biotope/element/-/element-1.6.0.tgz#14ef9c555d19f851cf0a7ee1d23a756d71d8bbd5"
   dependencies:
     dasherize "^2.0.0"
     hyperhtml "^2.13.0"

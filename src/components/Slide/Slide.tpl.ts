@@ -1,13 +1,15 @@
-import { createStylesFrom } from '../../resources/ts/core/createStylesFrom';
+import { createStylesCreatorFrom } from '../../resources/ts/core/createStylesCreatorFrom';
+import styles from './Slide.styles';
 
 interface TemplateData {
 
 }
 
-const styles = createStylesFrom(require('./Slide.styles'));
+const styleTagCreator = createStylesCreatorFrom(styles);
 
 export default (html: Function, data: TemplateData) => {
     return html`
-     ${styles}
-    <slot></slot>`;
+         ${styleTagCreator()}
+        <slot />
+    `;
 }
