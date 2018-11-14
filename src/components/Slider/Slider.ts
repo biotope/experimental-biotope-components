@@ -4,6 +4,7 @@ import './Stepper';
 
 import BioElement from '@biotope/element';
 import { XSlide } from './Slide';
+import pig from './boar.svg';
 
 
 export interface XSliderProps {
@@ -56,14 +57,17 @@ export class XSlider extends BioElement<XSliderProps, XSliderState> {
 
         this.slides.forEach((slide, idx) => slide.props = { isSelected: idx === selected });
 
-        return this.html`
+        this.html`
             <x-stepper direction="previous" onclick=${this.onPrevSlide}></x-stepper>
+            <h1>hello world</h1>
+            <div id="icon"></div>
             <div class="slides">
                 <slot></slot>
             </div>
             <x-stepper direction="next" onclick=${this.onNextSlide}></x-stepper>
             <x-dots props=${ { count: slidesCount, selected }} onselectSlide=${this.onSelectSlide}></x-dots>
         `;
+        this.shadowRoot.querySelector("#icon").innerHTML = pig;
     }
 
     onSelectSlide(e: any) {
